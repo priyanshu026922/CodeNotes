@@ -1,39 +1,53 @@
-🚀 CodeNotes – A Developer-Focused Blogging Platform
-CodeNotes is a full-stack blogging platform purpose-built for developers to publish, read, and share technical thoughts — all optimized for an exceptional writing and reading experience.
+# 🚀 CodeNotes – A Developer-Focused Blogging Platform
 
+**CodeNotes** is a full-stack blogging platform purpose-built for developers to **publish**, **read**, and **share** technical thoughts — all optimized for an exceptional writing and reading experience. Built with speed, scalability, and developer usability at its core.
 
-🧩 Key Features-
-🔐 JWT-Based Authentication
-Secure login/signup system using JSON Web Tokens.
+---
 
-💾 Edge-Optimized Deployment
-Powered by Cloudflare Workers, making the platform extremely fast and globally distributed.
+## 🧩 Key Features
 
-🧠 Tech-Centric Design
-Minimal UI optimized for developers, featuring:
+- 🔐 **JWT-Based Authentication**  
+  Secure and stateless login/signup system using **JSON Web Tokens**.
 
-Responsive code formatting
+- ⚡ **Edge-Optimized Deployment**  
+  Deployed using **Cloudflare Workers** for global, low-latency access.
 
-📦 Prisma ORM + PostgreSQL
-Type-safe and efficient database queries with Prisma connected to a scalable PostgreSQL backend.
+- 🧠 **Tech-Centric Minimal Design**  
+  Clean and distraction-free UI with:
+  - Responsive code formatting  
+  - Mobile-first layout  
+  - Focused reading and writing interface  
 
-🧰 Tech Stack
-Layer	Technologies Used
-Frontend	React.js, Tailwind CSS
-Backend	Node.js, Express.js
-Database	PostgreSQL with Prisma ORM
-Auth	JWT (JSON Web Token)
-Deployment	Cloudflare Workers (Edge Compute)
+- 📦 **Prisma ORM + PostgreSQL**  
+  Type-safe, performant database queries powered by Prisma and a production-ready PostgreSQL backend.
 
-🗂️ Project Structure-
-codenotes/
-├── client/            # React frontend
-│   ├── components/
-│   ├── pages/
-│   └── App.jsx
-├── server/            # Express backend
-│   ├── routes/
-│   └── prisma/
-│       └── schema.prisma
-├── README.md
-└── .env
+---
+
+## 🛠️ Tech Stack
+
+| Layer       | Technologies Used                    |
+|-------------|--------------------------------------|
+| Frontend    | React.js, Tailwind CSS               |
+| Backend     | Node.js, Express.js                  |
+| Database    | PostgreSQL with Prisma ORM           |
+| Auth        | JWT (JSON Web Token)                 |
+| Deployment  | Cloudflare Workers (Edge Compute)    |
+
+---
+
+## 📦 Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/codenotes.git
+cd codenotes
+
+cd server
+npm install
+
+# Setup Prisma
+npx prisma generate
+npx prisma migrate dev
+
+npm run dev
