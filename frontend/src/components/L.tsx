@@ -7,14 +7,18 @@ import { BACKEND_URL } from "../config";
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from "lucide-react";
 import toast from "react-hot-toast";
 
+
 export function L({ type }: { type: "signup" | "signin" }) {
   const navigate = useNavigate();
+
   const [postInputs, setpostInputs] = useState<signupInput>({
     email: "",
     password: ""
   });
+
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
 
   async function sendRequest() {
     setIsLoading(true);
@@ -34,7 +38,7 @@ export function L({ type }: { type: "signup" | "signin" }) {
     <div className="h-screen flex justify-center items-center bg-gradient-to-br from-white via-gray-100 to-blue-100 p-6">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-200">
-          {/* Header */}
+       
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -49,7 +53,7 @@ export function L({ type }: { type: "signup" | "signin" }) {
             </p>
           </div>
 
-          {/* Toggle */}
+       
           <div className="text-center mb-6 text-sm">
             <span className="text-gray-600">
               {type === "signin" ? "Don't have an account?" : "Already have an account?"}
@@ -62,7 +66,6 @@ export function L({ type }: { type: "signup" | "signin" }) {
             </Link>
           </div>
 
-          {/* Form */}
           <div className="space-y-5">
             <Labelinput
               label="Email Address"
@@ -100,7 +103,6 @@ export function L({ type }: { type: "signup" | "signin" }) {
             </div>
           </div>
 
-          {/* Submit */}
           <button
             onClick={sendRequest}
             disabled={isLoading || !postInputs.email || !postInputs.password}
@@ -112,6 +114,7 @@ export function L({ type }: { type: "signup" | "signin" }) {
                   : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-[1.02] hover:shadow-md"
               }`}
           >
+
             {isLoading ? (
               <>
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -125,7 +128,6 @@ export function L({ type }: { type: "signup" | "signin" }) {
             )}
           </button>
 
-          {/* Footer */}
           <div className="mt-6 text-center text-xs text-gray-500">
             {type === "signup" ? (
               <p>By creating an account, you agree to our Terms of Service</p>
@@ -141,6 +143,7 @@ export function L({ type }: { type: "signup" | "signin" }) {
   );
 }
 
+
 interface labelIn {
   label: string;
   placeholder: string;
@@ -148,6 +151,7 @@ interface labelIn {
   type?: string;
   icon?: React.ReactNode;
 }
+
 
 function Labelinput({ label, placeholder, onChange, type, icon }: labelIn) {
   return (

@@ -1,6 +1,7 @@
 
 import { Appbar } from "./Appbar"
 import type{ Blog } from "../hooks"
+
 export const BlogPost=({blog}:{
     blog:Blog
 })=>{

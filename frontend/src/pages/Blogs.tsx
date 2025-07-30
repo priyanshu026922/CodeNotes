@@ -28,7 +28,6 @@ export function Blogs(){
                  <div className="pt-6">
                     {blogs.map(blog=><HomePage
                     id={blog.id}
-                    //   authorName={blog.author.name||"Anonymous"}
                       title={blog.title}
                       content={blog.content}
                       publishedDate={"1st June 2025"}

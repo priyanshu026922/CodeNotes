@@ -11,10 +11,13 @@ import { BACKEND_URL } from "../config";
     }
 }
 
+
 export const useBlog=({id}:{id:string})=>{
+
   const [loading,setloading]=useState(true);
   const [blog,setBlog]=useState<Blog[]>([]);
 
+  
   useEffect(()=>{
     axios.get(`${BACKEND_URL}/api/v1/blog/${id}`,{
         headers:{
