@@ -7,15 +7,16 @@ import { BACKEND_URL } from "../config";
     "title":string,
     "id":number,
     "author":{
-    "name":string
+      "name":string
     }
 }
+
 
 
 export const useBlog=({id}:{id:string})=>{
 
   const [loading,setloading]=useState(true);
-  const [blog,setBlog]=useState<Blog[]>([]);
+  const [blog,setBlog]=useState<Blog|null>(null);
 
   
   useEffect(()=>{

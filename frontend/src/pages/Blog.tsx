@@ -15,7 +15,7 @@ export function Blog(){
     }
 
     return <div>
-     <BlogPost blog={blog}/>
+      {blog ? <BlogPost blog={blog} /> : <div>Blog not found.</div>}
     </div>
 }
 

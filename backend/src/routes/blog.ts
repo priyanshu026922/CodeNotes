@@ -91,18 +91,21 @@ return c.json({
 
 blogRouter.get('/bulk',async (c)=>{
     const query=c.req.query();
-    const skip=parseInt(query.skip||'0');
-     const take=parseInt(query.take||'10');
     const prisma = new PrismaClient({
     datasourceUrl: c.env.DATABASE_URL,
 }).$extends(withAccelerate());
 
-//skip, take,
+
 const blogs=await prisma.blog.findMany({
     select:{
      content:true,
      title:true,
-     id:true
+     id:true,
+     author:{
+        select:{
+            name:true    //
+        }
+     }
     }
 } );
 

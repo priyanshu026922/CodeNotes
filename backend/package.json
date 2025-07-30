@@ -8,7 +8,7 @@
   "dependencies": {
     "@prisma/client": "^6.10.0",
     "@prisma/extension-accelerate": "^2.0.1",
-    "@priyanshu026/common": "^1.0.0",
+    "@priyanshu026/common": "^1.0.3",
     "cors": "^2.8.5",
     "hono": "^4.7.11"
   },
