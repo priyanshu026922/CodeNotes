@@ -60,7 +60,7 @@ export function L({ type }: { type: "signup" | "signin" }) {
             </span>
             <Link
               className="ml-1 font-medium text-blue-600 hover:text-blue-700 transition duration-150"
-              to={type === "signin" ? "/" : "/signin"}
+              to={type === "signin" ? "/signup" : "/"}
             >
               {type === "signin" ? "Sign up" : "Sign in"}
             </Link>
